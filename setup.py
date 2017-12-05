@@ -11,6 +11,7 @@ setup(
     license='MIT',
     packages=find_packages(exclude=["*.tests"]),
     install_requires=[
+        'Click',
     ],
     package_data={},
     data_files=[],
