@@ -219,6 +219,7 @@ STD_MODULES = [
     'timeit',
     'trace',
     # 27. Software Packaging and Distribution
+    'setuptools',  # Not defined in docs, but available everywhere
     'distutils',
     'ensurepip',
     # 28. Python Runtime Services
