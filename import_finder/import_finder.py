@@ -13,7 +13,7 @@ from .constants import STD_MODULES
 
 # TODO: are we missing any regexes?
 GLOBAL_IMPORT_RE = re.compile('^\s*import\s((?:\w|[.])+)(?:\sas\s(?:\w|[.])+)*$')
-FROM_IMPORT_RE = re.compile('^\s*from\s((?:\w|[.])+)\simport\s((?:\w|[.])+)(?:\sas\s(?:(?:\w|[.])+))*$')
+FROM_IMPORT_RE = re.compile('^\s*from\s((?:\w|[.])+)\simport\s((?:\w|[.*])+)(?:\sas\s(?:(?:\w|[.])+))*$')
 
 def get_import_module_from_line(line):
     global_import = GLOBAL_IMPORT_RE.match(line)
