@@ -31,8 +31,8 @@ from .local.hey import y as z
 import ..back_local.hi
 from ..back_local import hi
 
-import __futures__
-from __futures__ import six
+import __future__
+from __future__ import six
 
 try:
     import x
@@ -62,8 +62,8 @@ try:
     import ..back_local.hi
     from ..back_local import hi
 
-    import __futures__
-    from __futures__ import six
+    import __future__
+    from __future__ import six
 except ImportError:
     pass
 '''
@@ -78,9 +78,9 @@ class TestGetImportModuleFromLine(TestCase):
             'x', 'x', 'x.y', 'x.y', 'x.y', 'x.y', 'x.hi.y', 'x.bye.y',
             '.local', '.local', '.local.hello', '.local.hello', '.local.y',
             '.local.y', '.local.hey.y', '.local.hey.y', '..back_local.hi',
-            '..back_local.hi', '__futures__', '__futures__.six',
+            '..back_local.hi', '__future__', '__future__.six',
             'x', 'x', 'x.y', 'x.y', 'x.y', 'x.y', 'x.hi.y', 'x.bye.y',
             '.local', '.local', '.local.hello', '.local.hello', '.local.y',
             '.local.y', '.local.hey.y', '.local.hey.y', '..back_local.hi',
-            '..back_local.hi', '__futures__', '__futures__.six',
+            '..back_local.hi', '__future__', '__future__.six',
             ], import_modules)

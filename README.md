@@ -6,7 +6,7 @@ Determine top-level imports in a python package
 ### Example Usage
 
 ```bash
-ag --python --noheading --nonumbers --nofilename <search_term> | import_finder
+ag --python --noheading --nonumbers --nofilename import | import_finder
 ```
 
 Just the top-level packages
