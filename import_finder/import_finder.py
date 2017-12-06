@@ -42,10 +42,13 @@ def find(ignore_relative, ignore_builtin):
         for line in stdin.readlines():
             module = get_import_module_from_line(line)
             if module:
-                if ignore_relative and module.startswith('.'):
+                if module.startswith('.'):
+                    if not ignore_relative:
+                        click.echo('relative: %s' % module)
                     continue
-                if ignore_builtin and is_builtin_module(module):
-                    click.echo('builtin: {}'.format(module))
+                if is_builtin_module(module):
+                    if not ignore_builtin:
+                        click.echo('builtin: %s' % module)
                     continue
                 click.echo(module)
 
