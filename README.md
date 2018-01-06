@@ -6,11 +6,11 @@ Determine top-level imports in a python package
 ### Example Usage
 
 ```bash
-ag --python --noheading --nonumbers --nofilename import | import_finder
+ag --python --noheading --nonumbers --nofilename import | import_finder | sort | uniq
 ```
 
 Just the top-level packages
 
 ```bash
-^same | awk -F '.' '{print $1}'
+ag --python --noheading --nonumbers --nofilename import | import_finder | awk -F '.' '{print $1}' | sort | uniq
 ```
